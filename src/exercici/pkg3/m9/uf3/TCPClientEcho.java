@@ -14,14 +14,10 @@ public class TCPClientEcho {
 
     public TCPClientEcho() throws IOException {
         this.socket = new Socket("localhost", 5487);
-
         outToServer = new DataOutputStream(socket.getOutputStream());
         buffer = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-
         outToServer.writeBytes("hola \n");
-
         String cadena = buffer.readLine();
-
         System.out.println(cadena);
     }
 
