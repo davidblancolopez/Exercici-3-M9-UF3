@@ -18,11 +18,8 @@ public class TCPServerEcho {
         Socket accept = ssocket.accept();
         DataOutputStream outToClient = new DataOutputStream(accept.getOutputStream());
         BufferedReader buffer = new BufferedReader(new InputStreamReader(accept.getInputStream()));
-
         String cadena = buffer.readLine();
-        
         outToClient.writeBytes(cadena + "\n");
-        
         
     }
 }
