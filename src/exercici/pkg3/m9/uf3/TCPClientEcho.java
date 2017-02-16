@@ -11,11 +11,16 @@ import java.net.Socket;
 public class TCPClientEcho {
     
     Socket socket;
-    DataOutputStream outToServer = new DataOutputStream(socket.getOutputStream());
-    BufferedReader buffer = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+    DataOutputStream outToServer;
+    BufferedReader buffer;
 
     public TCPClientEcho() throws IOException {
         this.socket = new Socket("localhost", 5487);
+        
+        outToServer = new DataOutputStream(socket.getOutputStream());
+        buffer = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        
+        outToServer.writeBytes("hola \n");
     }
     
     
