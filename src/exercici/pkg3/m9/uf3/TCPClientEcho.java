@@ -21,6 +21,10 @@ public class TCPClientEcho {
         buffer = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         
         outToServer.writeBytes("hola \n");
+        
+        String cadena = buffer.readLine();
+        
+        System.out.println(cadena);
     }
     
     

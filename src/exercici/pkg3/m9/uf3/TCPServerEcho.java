@@ -20,6 +20,9 @@ public class TCPServerEcho {
         BufferedReader buffer = new BufferedReader(new InputStreamReader(accept.getInputStream()));
 
         String cadena = buffer.readLine();
-        outToClient.writeBytes(cadena);
+        
+        outToClient.writeBytes(cadena + "\n");
+        
+        
     }
 }
