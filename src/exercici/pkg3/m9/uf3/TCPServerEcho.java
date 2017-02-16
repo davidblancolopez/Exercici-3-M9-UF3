@@ -17,7 +17,7 @@ public class TCPServerEcho {
         this.ssocket = new ServerSocket(port);
         Socket accept = ssocket.accept();
         DataOutputStream outToClient = new DataOutputStream(accept.getOutputStream());
-        BufferedReader bf = new BufferedReader(new InputStreamReader(accept.getInputStream()));
+        BufferedReader buffer = new BufferedReader(new InputStreamReader(accept.getInputStream()));
 
     }
 }
