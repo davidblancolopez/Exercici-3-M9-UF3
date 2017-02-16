@@ -11,11 +11,11 @@ import java.net.Socket;
 
 public class TCPServerEcho {
     int port = 5487;
-    ServerSocket ss;
+    ServerSocket ssocket;
 
     public TCPServerEcho() throws IOException {
-        this.ss = new ServerSocket(port);
-        Socket accept = ss.accept();
+        this.ssocket = new ServerSocket(port);
+        Socket accept = ssocket.accept();
         DataOutputStream outToClient = new DataOutputStream(accept.getOutputStream());
         BufferedReader bf = new BufferedReader(new InputStreamReader(accept.getInputStream()));
 

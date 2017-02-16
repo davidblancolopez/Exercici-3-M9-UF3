@@ -10,12 +10,12 @@ import java.net.Socket;
 
 public class TCPClientEcho {
     
-    Socket s;
-    DataOutputStream outToServer = new DataOutputStream(s.getOutputStream());
-    BufferedReader bf = new BufferedReader(new InputStreamReader(s.getInputStream()));
+    Socket socket;
+    DataOutputStream outToServer = new DataOutputStream(socket.getOutputStream());
+    BufferedReader buffer = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
     public TCPClientEcho() throws IOException {
-        this.s = new Socket("localhost", 5487);
+        this.socket = new Socket("localhost", 5487);
     }
     
     
