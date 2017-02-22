@@ -8,9 +8,7 @@ public class Exercici3M9UF3 {
 
 
     public static void main(String[] args) throws IOException {
-        TCPClientEcho TCPC = new TCPClientEcho();
-        TCPServerEcho TCPS = new TCPServerEcho();
-        
+
     }
     
 }
